@@ -1,0 +1,14 @@
+﻿@model Post
+
+
+<h2>@Model.Title - @Model.Id.CreationTime.ToLongDateString()</h2>
+
+<div>
+    @Model.Body
+</div>
+
+<p>
+    @Html.ActionLink("View Post", "Post", new { slug = Model.Slug, year = Model.Id.CreationTime.Year, month = Model.Id.CreationTime.Month })
+</p>
+
+<hr/>

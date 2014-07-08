@@ -1,0 +1,39 @@
+﻿@model Post
+
+@{
+    ViewBag.Title = @Model.Title;
+}
+
+<h1>@Model.Title - @Model.Id.CreationTime.ToLongDateString()</h1>
+<div>
+    @Model.Body
+</div>
+
+<hr/>
+
+<div>
+    <strong>Tags</strong>
+    @if (Model.Tags.Any())
+    {
+        <ul>
+            @foreach (var tag in Model.Tags)
+            {
+                <li>@Html.ActionLink(tag, "PostsByTag", new {tag}) (@Html.ActionLink("Remove", "RemovePostTag", new {id = Model.Id, tag = tag}))</li>
+            }
+        </ul>
+    }
+    else
+    {
+        <p>There are currently no tags for this post, add one below</p>
+    }
+    @using (Html.BeginForm("AddPostTag", "Blog", new { id = Model.Id }))
+    {
+        @Html.TextBox("tag", string.Empty)
+
+        <input type="submit" value="Add Tag" />
+    }
+</div>
+
+@Html.Partial("_PostComments", Model)
+
+@Html.ActionLink("Delete", "DeletePost", new { id = Model.Id }) | @Html.ActionLink("Edit", "EditPost", new { id = Model.Id })

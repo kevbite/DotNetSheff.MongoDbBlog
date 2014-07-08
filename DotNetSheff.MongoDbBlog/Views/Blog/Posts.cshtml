@@ -1,0 +1,11 @@
+﻿@model DotNetSheff.MongoDbBlog.ViewModels.PostsViewModel
+
+<div>
+
+    <h1>DotNetSheff Mongo Blog</h1>
+    
+    @Html.Partial("_ListPosts", Model.Posts)
+
+</div>
+
+@Html.ActionLink("Create Post", "CreatePost")

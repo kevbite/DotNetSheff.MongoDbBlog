@@ -1,0 +1,6 @@
+﻿@model Post
+
+<hr/>
+@Html.Partial("_ListPostComments", Model.Comments)
+
+@Html.Partial("_AddPostComment", new Comment(), new ViewDataDictionary(ViewData) { {"postId", Model.Id }})

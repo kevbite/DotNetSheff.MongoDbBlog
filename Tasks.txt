@@ -1,8 +1,3 @@
-MongoDB Coding Session
-====================
-
-MongoDB Coding Session by @kev_bite
-
 C# Helper objects
 OrderBy, OrderBy<>, Query, Query<>, Update, Update<>
 

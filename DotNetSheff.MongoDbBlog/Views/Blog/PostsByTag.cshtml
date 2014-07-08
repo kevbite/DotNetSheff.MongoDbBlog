@@ -1,0 +1,11 @@
+﻿@model DotNetSheff.MongoDbBlog.ViewModels.PostsByTagViewModel
+
+<div>
+
+    <h1>Posts with the tag of '@Model.Tag'</h1>
+
+    @Html.Partial("_ListPosts", Model.Posts)
+
+</div>
+
+@Html.ActionLink("See all Posts", "Posts")
