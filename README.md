@@ -1,4 +1,4 @@
-MongoDB Coding Session
+MongoDB Coding Session [![Build status](https://ci.appveyor.com/api/projects/status/sd967sfmndo2y24x/branch/master?svg=true)](https://ci.appveyor.com/project/kevbite/dotnetsheff-mongodbblog/branch/master)
 ====================
 
 MongoDB Coding Session by @kev_bite
